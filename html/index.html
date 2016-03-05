@@ -1,4 +1,12 @@
-<!DOCTYPE html><html lang=en><head><meta charset=utf-8><title>Simple Follow</title><meta name=robots content="noindex, nofollow"><meta name=description content=undefined><meta name=author content=undefined><meta name=handheldfriendly content=true><meta name=mobileoptimized content=320><meta name=viewport content="width=device-width, initial-scale=1.0"><meta http-equiv=cleartype content=on><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><link href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,700" rel=stylesheet type=text/css><link rel=stylesheet href=../css/application.css></head>
+<!DOCTYPE html><html lang=en><head><meta charset=utf-8><title>Simple Follow</title><meta name=robots content="noindex, nofollow"><meta name=description content=undefined><meta name=author content=undefined><meta name=handheldfriendly content=true><meta name=mobileoptimized content=320><meta name=viewport content="width=device-width, initial-scale=1.0"><meta http-equiv=cleartype content=on><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><link href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,700" rel=stylesheet type=text/css><link rel=stylesheet href=../css/application.css>
+
+<script>
+function outputUpdate(size) {
+	document.querySelector('#size_display').value = size;
+}
+</script>
+
+</head>
 
 <body>
 	<div class=wrapper>
@@ -32,14 +40,9 @@
 						<legend data-i18n=form.headline1 class=user-settings__legend>2. Configure your buttons</legend>
 							<div class=user-settings__item><label for=follow-label data-i18n=form.label-follow-label class=user-settings__label>Label</label> <input type=text id=follow-label name=follow-label value="Follow us:" class=user-settings__input>
 							</div>
-							<div class=user-settings__item><label for=theme data-i18n=form.label-theme class=user-settings__label>Theme</label> 
-
-
-
-							<input type=radio checked id=theme-dark name=theme value="dark" > <label for=theme-dark class=user-settings__radio>Dark</label> or  
-							<input type=radio  id=theme-light name=theme value="light" > <label for=theme-light class=user-settings__radio>light</label>
-							
-
+							<div class=user-settings__item><label for=color data-i18n=form.label-color class=user-settings__label>Color</label> <input type=color id=color name=color value="#ffffff" class=user-settings__input>
+							</div>
+							<div class=user-settings__item><label for=size data-i18n=form.label-size class=user-settings__label>Size</label> <input type=range id=size name=size min=8 max=64 value=8 step=8  oninput="outputUpdate(value)"class=user-settings__input><output for="size" id="size_display">8</output>
 							</div>
 							
 					</fieldset>
